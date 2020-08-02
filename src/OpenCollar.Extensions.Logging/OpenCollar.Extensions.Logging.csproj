@@ -17,10 +17,10 @@
         <Description>A library providing extensions to the `Microsoft.Extensions.Logging` library adding contextual information and timing mechanisms.</Description>
         <Copyright>Copyright © 2020 Jonathan Evans (jevans@open-collar.org.uk).</Copyright>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageProjectUrl>https://open-collar.github.io/OpenCollar.Extensions.Configuration/index.html</PackageProjectUrl>
+        <PackageProjectUrl>https://open-collar.github.io/OpenCollar.Extensions.Logging/index.html</PackageProjectUrl>
         <PackageIcon>opencollar-icon-320x320x32.png</PackageIcon>
         <PackageIconUrl />
-        <RepositoryUrl>https://github.com/open-collar/OpenCollar.Extensions.Configuration.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/open-collar/OpenCollar.Extensions.Logging.git</RepositoryUrl>
         <RepositoryType>GitHub</RepositoryType>
         <PackageTags>.net configuration</PackageTags>
         <NeutralLanguage>en-US</NeutralLanguage>

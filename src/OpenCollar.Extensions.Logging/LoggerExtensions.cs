@@ -33,6 +33,19 @@ namespace OpenCollar.Extensions.Logging
     public static class LoggerExtensions
     {
         /// <summary>
+        ///     Gets or sets a value indicating whether a mechanism for appending contextual information in the logs has
+        ///     been initialized (e.g. using telemetry).
+        /// </summary>
+        /// <value>
+        ///     <see langword="true" /> if a mechanism for appending contextual information in the logs has been
+        ///     initialized (e.g. using telemetry); otherwise, <see langword="false" />.
+        /// </value>
+        /// <remarks>
+        ///     If set to <see langword="false" /> then contextual information will be appended directly to the message.
+        /// </remarks>
+        public static bool ContextualInformationAppenderInitialized { get; set; }
+
+        /// <summary>
         ///     Creates a new operation scope.
         /// </summary>
         /// <param name="logger">
@@ -625,29 +638,20 @@ namespace OpenCollar.Extensions.Logging
             // readable, but still useful).
             string modifiedMessage;
 
-            //if ((ApplicationInsightsTelemeteryInitializer.IsInstantiated && ApplicationInsightsTelemeteryInitializer.IsExecuted) || ReferenceEquals(context, null))
-            // TODO: Inject options to control how context is recorded
-            if(false)
+            if(!ContextualInformationAppenderInitialized || ReferenceEquals(context, null))
             {
                 modifiedMessage = message;
             }
             else
             {
-                if(!ReferenceEquals(context, null))
+                var contextualInformation = context.ToString();
+                if(string.IsNullOrWhiteSpace(contextualInformation))
                 {
-                    var contextualInformation = context.ToString();
-                    if(string.IsNullOrWhiteSpace(contextualInformation))
-                    {
-                        modifiedMessage = message;
-                    }
-                    else
-                    {
-                        modifiedMessage = string.Concat(message, "\r\n", contextualInformation);
-                    }
+                    modifiedMessage = message;
                 }
                 else
                 {
-                    modifiedMessage = message;
+                    modifiedMessage = string.Concat(message, "\r\n", contextualInformation);
                 }
             }
 
