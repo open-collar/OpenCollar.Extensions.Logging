@@ -1,0 +1,1399 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class LoggerExtensions
+   | API Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class LoggerExtensions
+   | API Documentation ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href=".././images/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    <meta property="docfx:newtab" content="true">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src=".././images/opencollar-icon-48x96x32.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions">
+  
+  
+  <h1 id="OpenCollar_Extensions_Logging_LoggerExtensions" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions" class="text-break">Class LoggerExtensions
+  </h1>
+  <div class="markdown level0 summary"><p>Extension methods for the <span class="xref">Microsoft.Extensions.Logging.ILogger</span> interface.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">LoggerExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="OpenCollar.Extensions.Logging.html">OpenCollar.Extensions.Logging</a></h6>
+  <h6><strong>Assembly</strong>: OpenCollar.Extensions.Logging.dll</h6>
+  <h5 id="OpenCollar_Extensions_Logging_LoggerExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class LoggerExtensions</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)">BeginOperation(ILogger, LogLevel, String)</h4>
+  <div class="markdown level1 summary"><p>Creates a new operation scope.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NotNull]
+public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel logLevel, [NotNull] string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger to which messages will be written.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+        <td><span class="parametername">logLevel</span></td>
+        <td><p>The level at which to write to the log.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The fragment of message to write. Should be formed to fit into a sentence of the form &quot;Starting XXX.&quot;</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IDisposable</span></td>
+        <td><p>A disposable object representing the scope of the operations. Call <span class="xref">System.IDisposable.Dispose()</span> on
+the returned object to complete the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">logger</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentNullException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> is <span class="xref">null</span>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> is zero-length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.ArgumentException</span></td>
+        <td><p><code data-dev-comment-type="paramref" class="paramref">message</code> contains only white space characters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)">Log(ILogger, LogLevel, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given at the specified log level, with additional contextual information taken from the
+context given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] LoggingContext context, [CanBeNull] string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+        <td><span class="parametername">logLevel</span></td>
+        <td><p>The log level at which to log the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String)">Log(ILogger, LogLevel, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given at the specified log level, with additional contextual information taken from the
+context given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] Exception exception, [CanBeNull] string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+        <td><span class="parametername">logLevel</span></td>
+        <td><p>The log level at which to log the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)">Log(ILogger, LogLevel, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given at the specified log level, with additional contextual information taken from the
+context given.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.LogLevel</span></td>
+        <td><span class="parametername">logLevel</span></td>
+        <td><p>The log level at which to log the message.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogCritical(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Critical&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogCritical(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Critical&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogCritical(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Critical&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.String)">LogCritical(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Critical&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogCritical([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogDebug(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Debug&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogDebug(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Debug&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogDebug(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Debug&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.String)">LogDebug(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Debug&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogDebug([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogError(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Error&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogError(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Error&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogError(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Error&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.String)">LogError(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Error&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogError([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogInformation(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Information&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogInformation(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Information&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogInformation(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Information&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.String)">LogInformation(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Information&quot;, with additional contextual information
+taken from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogInformation([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogTrace(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Trace&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogTrace(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Trace&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogTrace(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Trace&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.String)">LogTrace(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Trace&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogTrace([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)">LogWarning(ILogger, LoggingContext, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Warning&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)">LogWarning(ILogger, LoggingContext, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Warning&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><span class="parametername">context</span></td>
+        <td><p>The context from which to take contextual information. If <span class="xref">null</span> the current thread's
+logging context is used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)">LogWarning(ILogger, Exception, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Warning&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Exception</span></td>
+        <td><span class="parametername">exception</span></td>
+        <td><p>The exception to record alongside the message (can be left as <span class="xref">null</span> if there is no
+exception to record).</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning*"></a>
+  <h4 id="OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.String)">LogWarning(ILogger, String)</h4>
+  <div class="markdown level1 summary"><p>Logs the message given with the log level set to &quot;Warning&quot;, with additional contextual information taken
+from the current thread's logging context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void LogWarning([CanBeNull] this ILogger logger, string message)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger into which to log the message given.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to log.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div style='box-sizing: border-box;'><div style='float: left; width: calc(100% - 200px);'>Copyright &copy; 2020 <a href='mailto:jevans@open-collar.org.uk'>Jonathan Evans</a></div><div style='float: left; width: 200px;'><span style='font-style: italic;'>Version: BUILD_VERSION</span></div></div>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
