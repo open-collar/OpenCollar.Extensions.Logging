@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/home/runner/work/OpenCollar.Extensions.Logging/OpenCollar.Extensions.Logging/docs-src/ApiDocs",
+  "source_base_path": "C:/Users/openc/source/repos/open-collar/OpenCollar.Extensions.Logging/docs-src/ApiDocs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenCollar.Extensions.Logging.ITransientContextualInformationScope.html",
-          "hash": "Pl5kcNAj8Nw1DitoRu90QQ=="
+          "hash": "oiV/hhHsrRPlkDnL4abv1Q=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenCollar.Extensions.Logging.LoggerExtensions.html",
-          "hash": "uVvmw5d/bYpWSxx692VXvw=="
+          "hash": "Env6FIrx5EpYa/GRhdC+/w=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,52 @@
       "output": {
         ".html": {
           "relative_path": "api/OpenCollar.Extensions.Logging.LoggingContext.html",
-          "hash": "BZxZ1sXBqyarvscn+dv7ZQ=="
+          "hash": "zxI2HxkcpBAh0khpoKBlRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenCollar.Extensions.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenCollar.Extensions.Logging.html",
+          "hash": "Bnik/bUB4Si1n9k9+uymzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenCollar.Extensions.Security.SecureStringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenCollar.Extensions.Security.SecureStringExtensions.html",
+          "hash": "wIVkMTbB2ie1cfoJByB4NQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenCollar.Extensions.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenCollar.Extensions.Security.html",
+          "hash": "Aj2uBMo0QLjDhbyaWjbFqA=="
         }
       },
       "is_incremental": false,
@@ -50,11 +95,62 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/OpenCollar.Extensions.Logging.yml",
+      "source_relative_path": "api/OpenCollar.Onyct.Security.Encryption.yml",
       "output": {
         ".html": {
-          "relative_path": "api/OpenCollar.Extensions.Logging.html",
-          "hash": "iw3yZx+Ff1bRhScjZ4IIeA=="
+          "relative_path": "api/OpenCollar.Onyct.Security.Encryption.html",
+          "hash": "wYdrniRApThlVyRyOCEVvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenCollar.Onyct.Security.Threading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenCollar.Onyct.Security.Threading.html",
+          "hash": "KFU2ai9+6RXpapYTskjWzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/OpenCollar.Onyct.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/OpenCollar.Onyct.Security.html",
+          "hash": "EIBH6s7iyzFZGLb6GIX9aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wtw.Crb.Common.Core.SecureStringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wtw.Crb.Common.Core.SecureStringExtensions.html",
+          "hash": "YFHeW/no9n1R3CTqj1xpIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wtw.Crb.Common.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wtw.Crb.Common.Core.html",
+          "hash": "Aj2uBMo0QLjDhbyaWjbFqA=="
         }
       },
       "is_incremental": false,
@@ -66,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "NoKAJAyLJuaFzlnoyHB+AQ=="
+          "hash": "WBrgEK2hFGZfZQ7UH5Pdvg=="
         }
       },
       "is_incremental": false,
@@ -123,7 +219,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "0PnAP95HphbF5C4x9/YkRg=="
+          "hash": "BcM5QvIkiAdLE+u+j+4Ptw=="
         }
       },
       "is_incremental": false,
@@ -147,7 +243,7 @@
       "output": {
         ".html": {
           "relative_path": "usage/index.html",
-          "hash": "9YBde5zf8m4O7hYMIKbXow=="
+          "hash": "WAiw4DwljaYQsSzkQzH0KA=="
         }
       },
       "is_incremental": false,
@@ -169,12 +265,10 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "TocDocumentProcessor": {
@@ -184,24 +278,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 4,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 8
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
         }
       }
     },

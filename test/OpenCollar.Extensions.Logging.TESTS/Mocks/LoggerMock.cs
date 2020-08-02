@@ -12,7 +12,7 @@ namespace OpenCollar.Extensions.Logging.TESTS.Mocks
 
         public IDisposable BeginScope<TState>(TState state)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public bool IsEnabled(LogLevel logLevel)

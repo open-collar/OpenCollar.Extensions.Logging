@@ -1,6 +1,76 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: OpenCollar.Extension.Security
+  name: OpenCollar.Extension.Security
+  href: api/OpenCollar.Onyct.Security.html
+  commentId: N:OpenCollar.Extension.Security
+  fullName: OpenCollar.Extension.Security
+  nameWithType: OpenCollar.Extension.Security
+- uid: OpenCollar.Extension.Security.Encryption
+  name: Encryption
+  href: api/OpenCollar.Onyct.Security.Encryption.html
+  commentId: T:OpenCollar.Extension.Security.Encryption
+  fullName: OpenCollar.Extension.Security.Encryption
+  nameWithType: Encryption
+- uid: OpenCollar.Extension.Security.Encryption.Decrypt(System.String,System.String)
+  name: Decrypt(String, String)
+  href: api/OpenCollar.Onyct.Security.Encryption.html#OpenCollar_Extension_Security_Encryption_Decrypt_System_String_System_String_
+  commentId: M:OpenCollar.Extension.Security.Encryption.Decrypt(System.String,System.String)
+  fullName: OpenCollar.Extension.Security.Encryption.Decrypt(System.String, System.String)
+  nameWithType: Encryption.Decrypt(String, String)
+- uid: OpenCollar.Extension.Security.Encryption.Decrypt*
+  name: Decrypt
+  href: api/OpenCollar.Onyct.Security.Encryption.html#OpenCollar_Extension_Security_Encryption_Decrypt_
+  commentId: Overload:OpenCollar.Extension.Security.Encryption.Decrypt
+  isSpec: "True"
+  fullName: OpenCollar.Extension.Security.Encryption.Decrypt
+  nameWithType: Encryption.Decrypt
+- uid: OpenCollar.Extension.Security.Encryption.Encrypt(System.String,System.String)
+  name: Encrypt(String, String)
+  href: api/OpenCollar.Onyct.Security.Encryption.html#OpenCollar_Extension_Security_Encryption_Encrypt_System_String_System_String_
+  commentId: M:OpenCollar.Extension.Security.Encryption.Encrypt(System.String,System.String)
+  fullName: OpenCollar.Extension.Security.Encryption.Encrypt(System.String, System.String)
+  nameWithType: Encryption.Encrypt(String, String)
+- uid: OpenCollar.Extension.Security.Encryption.Encrypt*
+  name: Encrypt
+  href: api/OpenCollar.Onyct.Security.Encryption.html#OpenCollar_Extension_Security_Encryption_Encrypt_
+  commentId: Overload:OpenCollar.Extension.Security.Encryption.Encrypt
+  isSpec: "True"
+  fullName: OpenCollar.Extension.Security.Encryption.Encrypt
+  nameWithType: Encryption.Encrypt
+- uid: OpenCollar.Extension.Security.Threading
+  name: Threading
+  href: api/OpenCollar.Onyct.Security.Threading.html
+  commentId: T:OpenCollar.Extension.Security.Threading
+  fullName: OpenCollar.Extension.Security.Threading
+  nameWithType: Threading
+- uid: OpenCollar.Extension.Security.Threading.GetThreadPrincipal
+  name: GetThreadPrincipal()
+  href: api/OpenCollar.Onyct.Security.Threading.html#OpenCollar_Extension_Security_Threading_GetThreadPrincipal
+  commentId: M:OpenCollar.Extension.Security.Threading.GetThreadPrincipal
+  fullName: OpenCollar.Extension.Security.Threading.GetThreadPrincipal()
+  nameWithType: Threading.GetThreadPrincipal()
+- uid: OpenCollar.Extension.Security.Threading.GetThreadPrincipal*
+  name: GetThreadPrincipal
+  href: api/OpenCollar.Onyct.Security.Threading.html#OpenCollar_Extension_Security_Threading_GetThreadPrincipal_
+  commentId: Overload:OpenCollar.Extension.Security.Threading.GetThreadPrincipal
+  isSpec: "True"
+  fullName: OpenCollar.Extension.Security.Threading.GetThreadPrincipal
+  nameWithType: Threading.GetThreadPrincipal
+- uid: OpenCollar.Extension.Security.Threading.GetThreadUser
+  name: GetThreadUser()
+  href: api/OpenCollar.Onyct.Security.Threading.html#OpenCollar_Extension_Security_Threading_GetThreadUser
+  commentId: M:OpenCollar.Extension.Security.Threading.GetThreadUser
+  fullName: OpenCollar.Extension.Security.Threading.GetThreadUser()
+  nameWithType: Threading.GetThreadUser()
+- uid: OpenCollar.Extension.Security.Threading.GetThreadUser*
+  name: GetThreadUser
+  href: api/OpenCollar.Onyct.Security.Threading.html#OpenCollar_Extension_Security_Threading_GetThreadUser_
+  commentId: Overload:OpenCollar.Extension.Security.Threading.GetThreadUser
+  isSpec: "True"
+  fullName: OpenCollar.Extension.Security.Threading.GetThreadUser
+  nameWithType: Threading.GetThreadUser
 - uid: OpenCollar.Extensions.Logging
   name: OpenCollar.Extensions.Logging
   href: api/OpenCollar.Extensions.Logging.html
@@ -437,3 +507,35 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggingContext.ToString
   nameWithType: LoggingContext.ToString
+- uid: OpenCollar.Extensions.Logging.SecureStringExtensions
+  name: SecureStringExtensions
+  href: api/OpenCollar.Extensions.Security.SecureStringExtensions.html
+  commentId: T:OpenCollar.Extensions.Logging.SecureStringExtensions
+  fullName: OpenCollar.Extensions.Logging.SecureStringExtensions
+  nameWithType: SecureStringExtensions
+- uid: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString(System.String)
+  name: ToSecureString(String)
+  href: api/OpenCollar.Extensions.Security.SecureStringExtensions.html#OpenCollar_Extensions_Logging_SecureStringExtensions_ToSecureString_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString(System.String)
+  fullName: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString(System.String)
+  nameWithType: SecureStringExtensions.ToSecureString(String)
+- uid: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString*
+  name: ToSecureString
+  href: api/OpenCollar.Extensions.Security.SecureStringExtensions.html#OpenCollar_Extensions_Logging_SecureStringExtensions_ToSecureString_
+  commentId: Overload:OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSecureString
+  nameWithType: SecureStringExtensions.ToSecureString
+- uid: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString(System.Security.SecureString)
+  name: ToSystemString(SecureString)
+  href: api/OpenCollar.Extensions.Security.SecureStringExtensions.html#OpenCollar_Extensions_Logging_SecureStringExtensions_ToSystemString_System_Security_SecureString_
+  commentId: M:OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString(System.Security.SecureString)
+  fullName: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString(System.Security.SecureString)
+  nameWithType: SecureStringExtensions.ToSystemString(SecureString)
+- uid: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString*
+  name: ToSystemString
+  href: api/OpenCollar.Extensions.Security.SecureStringExtensions.html#OpenCollar_Extensions_Logging_SecureStringExtensions_ToSystemString_
+  commentId: Overload:OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.SecureStringExtensions.ToSystemString
+  nameWithType: SecureStringExtensions.ToSystemString
