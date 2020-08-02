@@ -63,6 +63,7 @@ There are no hard dependencies on tooling, all that is required is the
 # Related Projects
 
 * [OpenCollar.Extensions](https://github.com/open-collar/OpenCollar.Extensions)
+* [OpenCollar.Extensions.ApplicationInsights](https://github.com/open-collar/OpenCollar.Extensions.ApplicationInsights)
 * [OpenCollar.Extensions.Collections](https://github.com/open-collar/OpenCollar.Extensions.Collections)
 * [OpenCollar.Extensions.Configuraton](https://github.com/open-collar/OpenCollar.Extensions.Configuraton)
 * [OpenCollar.Extensions.Environment](https://github.com/open-collar/OpenCollar.Extensions.Environment)
