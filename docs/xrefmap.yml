@@ -45,6 +45,19 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation
   nameWithType: LoggerExtensions.BeginOperation
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
+  name: ContextualInformationAppenderInitialized
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_ContextualInformationAppenderInitialized
+  commentId: P:OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
+  nameWithType: LoggerExtensions.ContextualInformationAppenderInitialized
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized*
+  name: ContextualInformationAppenderInitialized
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_ContextualInformationAppenderInitialized_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
+  nameWithType: LoggerExtensions.ContextualInformationAppenderInitialized
 - uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
   name: Log(ILogger, LogLevel, LoggingContext, String)
   href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_String_
