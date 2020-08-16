@@ -324,7 +324,7 @@ namespace OpenCollar.Extensions.Logging
         ///     An array containing the key values pairs currently in the context.
         /// </returns>
         [NotNull]
-        internal KeyValuePair<string, string>[] GetSnapshot() => _contextualInformation.ToArray();
+        public KeyValuePair<string, string>[] GetSnapshot() => _contextualInformation.ToArray();
 
         /// <summary>
         ///     Reload the contextual information from the snapshot given.
