@@ -32,12 +32,49 @@ references:
   commentId: T:OpenCollar.Extensions.Logging.LoggerExtensions
   fullName: OpenCollar.Extensions.Logging.LoggerExtensions
   nameWithType: LoggerExtensions
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages
+  name: AppendContextualInformationToLogMessages
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_AppendContextualInformationToLogMessages
+  commentId: P:OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages
+  nameWithType: LoggerExtensions.AppendContextualInformationToLogMessages
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages*
+  name: AppendContextualInformationToLogMessages
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_AppendContextualInformationToLogMessages_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.AppendContextualInformationToLogMessages
+  nameWithType: LoggerExtensions.AppendContextualInformationToLogMessages
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.LogLevel,System.String)
+  name: BeginOperation(ILogger, LogLevel, LogLevel, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_LogLevel_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.LogLevel,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.LogLevel, System.String)
+  nameWithType: LoggerExtensions.BeginOperation(ILogger, LogLevel, LogLevel, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.LogLevel,System.String,System.Func{System.String})
+  name: BeginOperation(ILogger, LogLevel, LogLevel, String, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_LogLevel_System_String_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.LogLevel,System.String,System.Func{System.String})
+  name.vb: BeginOperation(ILogger, LogLevel, LogLevel, String, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.LogLevel, System.String, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.LogLevel, System.String, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.BeginOperation(ILogger, LogLevel, LogLevel, String, Func<String>)
+  nameWithType.vb: LoggerExtensions.BeginOperation(ILogger, LogLevel, LogLevel, String, Func(Of String))
 - uid: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
   name: BeginOperation(ILogger, LogLevel, String)
   href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_
   commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
   fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.String)
   nameWithType: LoggerExtensions.BeginOperation(ILogger, LogLevel, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Func{System.String})
+  name: BeginOperation(ILogger, LogLevel, String, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String,System.Func{System.String})
+  name.vb: BeginOperation(ILogger, LogLevel, String, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.String, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.String, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.BeginOperation(ILogger, LogLevel, String, Func<String>)
+  nameWithType.vb: LoggerExtensions.BeginOperation(ILogger, LogLevel, String, Func(Of String))
 - uid: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation*
   name: BeginOperation
   href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_BeginOperation_
@@ -45,19 +82,6 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation
   nameWithType: LoggerExtensions.BeginOperation
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
-  name: ContextualInformationAppenderInitialized
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_ContextualInformationAppenderInitialized
-  commentId: P:OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
-  nameWithType: LoggerExtensions.ContextualInformationAppenderInitialized
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized*
-  name: ContextualInformationAppenderInitialized
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_ContextualInformationAppenderInitialized_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
-  isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.ContextualInformationAppenderInitialized
-  nameWithType: LoggerExtensions.ContextualInformationAppenderInitialized
 - uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
   name: Log(ILogger, LogLevel, LoggingContext, String)
   href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_String_
@@ -275,155 +299,116 @@ references:
   commentId: T:OpenCollar.Extensions.Logging.LoggingContext
   fullName: OpenCollar.Extensions.Logging.LoggingContext
   nameWithType: LoggingContext
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Guid)
-  name: AddInformation(String, Guid)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_System_String_System_Guid_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Guid)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Guid)
-  nameWithType: LoggingContext.AddInformation(String, Guid)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Int32)
-  name: AddInformation(String, Int32)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_System_String_System_Int32_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Int32)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Int32)
-  nameWithType: LoggingContext.AddInformation(String, Int32)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Nullable{System.Guid})
-  name: AddInformation(String, Nullable<Guid>)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_System_String_System_Nullable_System_Guid__
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Nullable{System.Guid})
-  name.vb: AddInformation(String, Nullable(Of Guid))
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Nullable<System.Guid>)
-  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Nullable(Of System.Guid))
-  nameWithType: LoggingContext.AddInformation(String, Nullable<Guid>)
-  nameWithType.vb: LoggingContext.AddInformation(String, Nullable(Of Guid))
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Nullable{System.Int32})
-  name: AddInformation(String, Nullable<Int32>)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_System_String_System_Nullable_System_Int32__
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.Nullable{System.Int32})
-  name.vb: AddInformation(String, Nullable(Of Int32))
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Nullable<System.Int32>)
-  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.Nullable(Of System.Int32))
-  nameWithType: LoggingContext.AddInformation(String, Nullable<Int32>)
-  nameWithType.vb: LoggingContext.AddInformation(String, Nullable(Of Int32))
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.String)
-  name: AddInformation(String, String)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_System_String_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation(System.String, System.String)
-  nameWithType: LoggingContext.AddInformation(String, String)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.AddInformation*
-  name: AddInformation
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AddInformation_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.AddInformation
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Guid)
+  name: AppendInfo(String, Guid)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Guid_
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Guid)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Guid)
+  nameWithType: LoggingContext.AppendInfo(String, Guid)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Int32)
+  name: AppendInfo(String, Int32)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Int32_
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Int32)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Int32)
+  nameWithType: LoggingContext.AppendInfo(String, Int32)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Guid})
+  name: AppendInfo(String, Nullable<Guid>)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Guid__
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Guid})
+  name.vb: AppendInfo(String, Nullable(Of Guid))
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Nullable<System.Guid>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Nullable(Of System.Guid))
+  nameWithType: LoggingContext.AppendInfo(String, Nullable<Guid>)
+  nameWithType.vb: LoggingContext.AppendInfo(String, Nullable(Of Guid))
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Int32})
+  name: AppendInfo(String, Nullable<Int32>)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Int32__
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Int32})
+  name.vb: AppendInfo(String, Nullable(Of Int32))
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Nullable<System.Int32>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.Nullable(Of System.Int32))
+  nameWithType: LoggingContext.AppendInfo(String, Nullable<Int32>)
+  nameWithType.vb: LoggingContext.AppendInfo(String, Nullable(Of Int32))
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.String)
+  name: AppendInfo(String, String)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String, System.String)
+  nameWithType: LoggingContext.AppendInfo(String, String)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*
+  name: AppendInfo
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.AppendInfo
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.AddInformation
-  nameWithType: LoggingContext.AddInformation
-- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearContext
-  name: ClearContext()
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearContext
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.ClearContext
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearContext()
-  nameWithType: LoggingContext.ClearContext()
-- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearContext*
-  name: ClearContext
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearContext_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.ClearContext
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.AppendInfo
+  nameWithType: LoggingContext.AppendInfo
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Clear
+  name: Clear()
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Clear
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.Clear
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Clear()
+  nameWithType: LoggingContext.Clear()
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Clear*
+  name: Clear
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Clear_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.Clear
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearContext
-  nameWithType: LoggingContext.ClearContext
-- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation
-  name: ClearInformation()
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInformation
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.ClearInformation
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation()
-  nameWithType: LoggingContext.ClearInformation()
-- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation(System.String)
-  name: ClearInformation(String)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInformation_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.ClearInformation(System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation(System.String)
-  nameWithType: LoggingContext.ClearInformation(String)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation*
-  name: ClearInformation
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInformation_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.ClearInformation
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Clear
+  nameWithType: LoggingContext.Clear
+- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo
+  name: ClearInfo()
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInfo
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.ClearInfo
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo()
+  nameWithType: LoggingContext.ClearInfo()
+- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo(System.String)
+  name: ClearInfo(String)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.ClearInfo(System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo(System.String)
+  nameWithType: LoggingContext.ClearInfo(String)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo*
+  name: ClearInfo
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.ClearInfo
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInformation
-  nameWithType: LoggingContext.ClearInformation
-- uid: OpenCollar.Extensions.Logging.LoggingContext.GetContext
-  name: GetContext()
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetContext
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.GetContext
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetContext()
-  nameWithType: LoggingContext.GetContext()
-- uid: OpenCollar.Extensions.Logging.LoggingContext.GetContext(OpenCollar.Extensions.Logging.LoggingContext)
-  name: GetContext(LoggingContext)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetContext_OpenCollar_Extensions_Logging_LoggingContext_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.GetContext(OpenCollar.Extensions.Logging.LoggingContext)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetContext(OpenCollar.Extensions.Logging.LoggingContext)
-  nameWithType: LoggingContext.GetContext(LoggingContext)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.GetContext*
-  name: GetContext
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetContext_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.GetContext
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.ClearInfo
+  nameWithType: LoggingContext.ClearInfo
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Current
+  name: Current()
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Current
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.Current
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Current()
+  nameWithType: LoggingContext.Current()
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Current(OpenCollar.Extensions.Logging.LoggingContext)
+  name: Current(LoggingContext)
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Current_OpenCollar_Extensions_Logging_LoggingContext_
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.Current(OpenCollar.Extensions.Logging.LoggingContext)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Current(OpenCollar.Extensions.Logging.LoggingContext)
+  nameWithType: LoggingContext.Current(LoggingContext)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Current*
+  name: Current
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Current_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.Current
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetContext
-  nameWithType: LoggingContext.GetContext
-- uid: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
-  name: GetSnapshot()
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot()
-  nameWithType: LoggingContext.GetSnapshot()
-- uid: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot*
-  name: GetSnapshot
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Current
+  nameWithType: LoggingContext.Current
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)
+  name: Item[String]
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Item_System_String_
+  commentId: P:OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)
+  name.vb: Item(String)
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Item[System.String]
+  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)
+  nameWithType: LoggingContext.Item[String]
+  nameWithType.vb: LoggingContext.Item(String)
+- uid: OpenCollar.Extensions.Logging.LoggingContext.Item*
+  name: Item
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Item_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.Item
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
-  nameWithType: LoggingContext.GetSnapshot
-- uid: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair{System.String,System.String}[])
-  name: RevertToSnapshot(KeyValuePair<String, String>[])
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_RevertToSnapshot_System_Collections_Generic_KeyValuePair_System_String_System_String____
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair{System.String,System.String}[])
-  name.vb: RevertToSnapshot(KeyValuePair(Of String, String)())
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair<System.String, System.String>[])
-  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair(Of System.String, System.String)())
-  nameWithType: LoggingContext.RevertToSnapshot(KeyValuePair<String, String>[])
-  nameWithType.vb: LoggingContext.RevertToSnapshot(KeyValuePair(Of String, String)())
-- uid: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot*
-  name: RevertToSnapshot
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_RevertToSnapshot_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot
-  isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot
-  nameWithType: LoggingContext.RevertToSnapshot
-- uid: OpenCollar.Extensions.Logging.LoggingContext.SetHostRole(System.String)
-  name: SetHostRole(String)
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_SetHostRole_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.SetHostRole(System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.SetHostRole(System.String)
-  nameWithType: LoggingContext.SetHostRole(String)
-- uid: OpenCollar.Extensions.Logging.LoggingContext.SetHostRole*
-  name: SetHostRole
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_SetHostRole_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.SetHostRole
-  isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.SetHostRole
-  nameWithType: LoggingContext.SetHostRole
-- uid: OpenCollar.Extensions.Logging.LoggingContext.StartScope
-  name: StartScope()
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_StartScope
-  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.StartScope
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.StartScope()
-  nameWithType: LoggingContext.StartScope()
-- uid: OpenCollar.Extensions.Logging.LoggingContext.StartScope*
-  name: StartScope
-  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_StartScope_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.StartScope
-  isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggingContext.StartScope
-  nameWithType: LoggingContext.StartScope
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.Item
+  nameWithType: LoggingContext.Item
 - uid: OpenCollar.Extensions.Logging.LoggingContext.ToString
   name: ToString()
   href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ToString
