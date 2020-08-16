@@ -31,7 +31,7 @@ namespace OpenCollar.Extensions.Logging.TESTS
             var logger = new LoggerMock();
             logger.LogLevel = Microsoft.Extensions.Logging.LogLevel.Trace;
 
-            var x = new OperationScope(logger, Microsoft.Extensions.Logging.LogLevel.Critical, "MESSAGE");
+            var x = new OperationScope(logger, Microsoft.Extensions.Logging.LogLevel.Critical, Microsoft.Extensions.Logging.LogLevel.Critical, "MESSAGE", null);
 
             Assert.NotNull(x);
             Assert.NotEmpty(logger.LastMessage);

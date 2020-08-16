@@ -37,13 +37,14 @@ namespace OpenCollar.Extensions.Logging
         ///     been initialized (e.g. using telemetry).
         /// </summary>
         /// <value>
-        ///     <see langword="true" /> if a mechanism for appending contextual information in the logs has been
-        ///     initialized (e.g. using telemetry); otherwise, <see langword="false" />.
+        ///     <see langword="false" /> if a mechanism for appending contextual information in the logs has been
+        ///     initialized (e.g. using telemetry); otherwise, <see langword="true" /> to append the information
+        ///     directly to messages.
         /// </value>
         /// <remarks>
-        ///     If set to <see langword="false" /> then contextual information will be appended directly to the message.
+        ///     If set to <see langword="true" /> then contextual information will be appended directly to each message.
         /// </remarks>
-        public static bool ContextualInformationAppenderInitialized { get; set; }
+        public static bool AppendContextualInformationToLogMessages { get; set; } = true;
 
         /// <summary>
         ///     Creates a new operation scope.
@@ -78,7 +79,131 @@ namespace OpenCollar.Extensions.Logging
         {
             logger.Validate(nameof(logger), ObjectIs.NotNull);
             message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
-            return new OperationScope(logger, logLevel, message);
+
+            return new OperationScope(logger, logLevel, logLevel, message, null);
+        }
+
+        /// <summary>
+        ///     Creates a new operation scope.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger to which messages will be written.
+        /// </param>
+        /// <param name="logLevel">
+        ///     The level at which to write to the log.
+        /// </param>
+        /// <param name="message">
+        ///     The fragment of message to write. Should be formed to fit into a sentence of the form "Starting XXX."
+        /// </param>
+        /// <param name="getAdditionalEndMessage">
+        ///     An action that will be called when the operation has finished to get any additional details of the operation.
+        /// </param>
+        /// <returns>
+        ///     A disposable object representing the scope of the operations. Call <see cref="IDisposable.Dispose" /> on
+        ///     the returned object to complete the operation.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="logger" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="logger" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> is zero-length.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> is zero-length.
+        /// </exception>
+        [NotNull]
+        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel logLevel, [NotNull] string message, [CanBeNull] Func<string>? getAdditionalEndMessage)
+        {
+            logger.Validate(nameof(logger), ObjectIs.NotNull);
+            message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
+
+            return new OperationScope(logger, logLevel, logLevel, message, getAdditionalEndMessage);
+        }
+
+        /// <summary>
+        ///     Creates a new operation scope.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger to which messages will be written.
+        /// </param>
+        /// <param name="beginLogLevel">
+        ///     The level at which to write the log message at the start of the operation.
+        /// </param>
+        /// <param name="endLogLevel">
+        ///     The log level to use to write the message at the end of the operation.
+        /// </param>
+        /// <param name="message">
+        ///     The fragment of message to write. Should be formed to fit into a sentence of the form "Starting XXX."
+        /// </param>
+        /// <returns>
+        ///     A disposable object representing the scope of the operations. Call <see cref="IDisposable.Dispose" /> on
+        ///     the returned object to complete the operation.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="logger" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="message" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> is zero-length.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> contains only white space characters.
+        /// </exception>
+        [NotNull]
+        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, [NotNull] string message)
+        {
+            logger.Validate(nameof(logger), ObjectIs.NotNull);
+            message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
+
+            return new OperationScope(logger, beginLogLevel, beginLogLevel, message, null);
+        }
+
+        /// <summary>
+        ///     Creates a new operation scope.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger to which messages will be written.
+        /// </param>
+        /// <param name="beginLogLevel">
+        ///     The level at which to write the log message at the start of the operation.
+        /// </param>
+        /// <param name="endLogLevel">
+        ///     The log level to use to write the message at the end of the operation.
+        /// </param>
+        /// <param name="message">
+        ///     The fragment of message to write. Should be formed to fit into a sentence of the form "Starting XXX."
+        /// </param>
+        /// <param name="getAdditionalEndMessage">
+        ///     An action that will be called when the operation has finished to get any additional details of the operation.
+        /// </param>
+        /// <returns>
+        ///     A disposable object representing the scope of the operations. Call <see cref="IDisposable.Dispose" /> on
+        ///     the returned object to complete the operation.
+        /// </returns>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="logger" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentNullException">
+        ///     <paramref name="message" /> is <see langword="null" />.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> is zero-length.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        ///     <paramref name="message" /> contains only white space characters.
+        /// </exception>
+        [NotNull]
+        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, [NotNull] string message, [CanBeNull] Func<string>? getAdditionalEndMessage)
+        {
+            logger.Validate(nameof(logger), ObjectIs.NotNull);
+            message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
+
+            return new OperationScope(logger, beginLogLevel, beginLogLevel, message, getAdditionalEndMessage);
         }
 
         /// <summary>
@@ -638,7 +763,7 @@ namespace OpenCollar.Extensions.Logging
             // readable, but still useful).
             string modifiedMessage;
 
-            if(!ContextualInformationAppenderInitialized || ReferenceEquals(context, null))
+            if(!AppendContextualInformationToLogMessages || ReferenceEquals(context, null))
             {
                 modifiedMessage = message;
             }
