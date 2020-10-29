@@ -1,7 +1,7 @@
 # OpenCollar.Extensions.Logging
 
-A library providing extensions to the `Microsoft.Extensions.Logging` library
-adding contextual information and timing mechanisms.
+A library providing extensions to the `Microsoft.Extensions.Logging` library adding "Safe" extensions,
+contextual information and timing mechanisms.
 
 ## NuGet Package
 
@@ -29,6 +29,8 @@ adding contextual information and timing mechanisms.
 
 # Related Projects
 
+* [OpenCollar.Azure.ReliableQueue](https://github.com/open-collar/OpenCollar.Azure.ReliableQueue)
+* [OpenCollar.Azure.Storage](https://github.com/open-collar/OpenCollar.Azure.Storage)
 * [OpenCollar.Extensions](https://github.com/open-collar/OpenCollar.Extensions)
 * [OpenCollar.Extensions.ApplicationInsights](https://github.com/open-collar/OpenCollar.Extensions.ApplicationInsights)
 * [OpenCollar.Extensions.Collections](https://github.com/open-collar/OpenCollar.Extensions.Collections)

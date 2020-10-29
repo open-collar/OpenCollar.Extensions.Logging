@@ -19,8 +19,6 @@
 
 using System;
 
-using JetBrains.Annotations;
-
 using Microsoft.Extensions.Logging;
 
 using OpenCollar.Extensions.Validation;
@@ -74,8 +72,7 @@ namespace OpenCollar.Extensions.Logging
         /// <exception cref="ArgumentException">
         ///     <paramref name="message" /> contains only white space characters.
         /// </exception>
-        [NotNull]
-        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel logLevel, [NotNull] string message)
+        public static IDisposable BeginOperation(this ILogger logger, LogLevel logLevel, string message)
         {
             logger.Validate(nameof(logger), ObjectIs.NotNull);
             message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
@@ -114,8 +111,7 @@ namespace OpenCollar.Extensions.Logging
         /// <exception cref="ArgumentException">
         ///     <paramref name="message" /> is zero-length.
         /// </exception>
-        [NotNull]
-        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel logLevel, [NotNull] string message, [CanBeNull] Func<string>? getAdditionalEndMessage)
+        public static IDisposable BeginOperation(this ILogger logger, LogLevel logLevel, string message, Func<string>? getAdditionalEndMessage)
         {
             logger.Validate(nameof(logger), ObjectIs.NotNull);
             message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
@@ -154,13 +150,12 @@ namespace OpenCollar.Extensions.Logging
         /// <exception cref="ArgumentException">
         ///     <paramref name="message" /> contains only white space characters.
         /// </exception>
-        [NotNull]
-        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, [NotNull] string message)
+        public static IDisposable BeginOperation(this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, string message)
         {
             logger.Validate(nameof(logger), ObjectIs.NotNull);
             message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
 
-            return new OperationScope(logger, beginLogLevel, beginLogLevel, message, null);
+            return new OperationScope(logger, beginLogLevel, endLogLevel, message, null);
         }
 
         /// <summary>
@@ -197,13 +192,12 @@ namespace OpenCollar.Extensions.Logging
         /// <exception cref="ArgumentException">
         ///     <paramref name="message" /> contains only white space characters.
         /// </exception>
-        [NotNull]
-        public static IDisposable BeginOperation([NotNull] this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, [NotNull] string message, [CanBeNull] Func<string>? getAdditionalEndMessage)
+        public static IDisposable BeginOperation(this ILogger logger, LogLevel beginLogLevel, LogLevel endLogLevel, string message, Func<string>? getAdditionalEndMessage)
         {
             logger.Validate(nameof(logger), ObjectIs.NotNull);
             message.Validate(nameof(message), StringIs.NotNullEmptyOrWhiteSpace);
 
-            return new OperationScope(logger, beginLogLevel, beginLogLevel, message, getAdditionalEndMessage);
+            return new OperationScope(logger, beginLogLevel, endLogLevel, message, getAdditionalEndMessage);
         }
 
         /// <summary>
@@ -223,9 +217,9 @@ namespace OpenCollar.Extensions.Logging
         /// <param name="message">
         ///     The message to log.
         /// </param>
-        public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] LoggingContext context, [CanBeNull] string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, LoggingContext? context, string? message)
         {
-            Log(logger, logLevel, context, null, message);
+            return SafeLog(logger, logLevel, context, null, message);
         }
 
         /// <summary>
@@ -241,9 +235,9 @@ namespace OpenCollar.Extensions.Logging
         /// <param name="message">
         ///     The message to log.
         /// </param>
-        public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, string? message)
         {
-            Log(logger, logLevel, null, null, message);
+            return SafeLog(logger, logLevel, null, null, message);
         }
 
         /// <summary>
@@ -263,465 +257,74 @@ namespace OpenCollar.Extensions.Logging
         /// <param name="message">
         ///     The message to log.
         /// </param>
-        public static void Log([CanBeNull] this ILogger logger, LogLevel logLevel, [CanBeNull] Exception exception, [CanBeNull] string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, Exception? exception, string? message)
         {
-            Log(logger, logLevel, null, exception, message);
+            return SafeLog(logger, logLevel, null, exception, message);
         }
 
         /// <summary>
-        ///     Logs the message given with the log level set to "Critical", with additional contextual information
-        ///     taken from the current thread's logging context.
+        ///     Logs the message given at the specified log level, with additional contextual information taken from the
+        ///     context given.
         /// </summary>
         /// <param name="logger">
         ///     The logger into which to log the message given.
         /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogCritical([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Critical, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Critical", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
+        /// <param name="logLevel">
+        ///     The log level at which to log the message.
         /// </param>
         /// <param name="context">
         ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
         ///     logging context is used.
         /// </param>
         /// <param name="message">
-        ///     The message to log.
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
         /// </param>
-        public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, LoggingContext? context, Func<string?>? message)
         {
-            Log(logger, LogLevel.Critical, context, null, message);
+            return SafeLog(logger, logLevel, context, null, message);
         }
 
         /// <summary>
-        ///     Logs the message given with the log level set to "Critical", with additional contextual information
-        ///     taken from the current thread's logging context.
+        ///     Logs the message given at the specified log level, with additional contextual information taken from the
+        ///     context given.
         /// </summary>
         /// <param name="logger">
         ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="logLevel">
+        ///     The log level at which to log the message.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, Func<string?>? message)
+        {
+            return SafeLog(logger, logLevel, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given at the specified log level, with additional contextual information taken from the
+        ///     context given.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="logLevel">
+        ///     The log level at which to log the message.
         /// </param>
         /// <param name="exception">
         ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
         ///     exception to record).
         /// </param>
         /// <param name="message">
-        ///     The message to log.
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
         /// </param>
-        public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, Exception? exception, Func<string?>? message)
         {
-            Log(logger, LogLevel.Critical, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Critical", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogCritical([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Critical, context, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogDebug([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Debug, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
-        {
-            Log(logger, LogLevel.Debug, context, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Debug, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogDebug([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Debug, context, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogError([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Error, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
-        {
-            Log(logger, LogLevel.Error, context, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Error, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogError([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Error, context, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Information", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogInformation([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Information, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Information", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
-        {
-            Log(logger, LogLevel.Information, context, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Information", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Information, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Information", with additional contextual information
-        ///     taken from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogInformation([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Information, context, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogTrace([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Trace, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
-        {
-            Log(logger, LogLevel.Trace, context, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Trace, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogTrace([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Trace, context, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogWarning([CanBeNull] this ILogger logger, string message)
-        {
-            Log(logger, LogLevel.Warning, null, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, string message)
-        {
-            Log(logger, LogLevel.Warning, context, null, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Warning, null, exception, message);
-        }
-
-        /// <summary>
-        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
-        ///     from the current thread's logging context.
-        /// </summary>
-        /// <param name="logger">
-        ///     The logger into which to log the message given.
-        /// </param>
-        /// <param name="context">
-        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
-        ///     logging context is used.
-        /// </param>
-        /// <param name="exception">
-        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
-        ///     exception to record).
-        /// </param>
-        /// <param name="message">
-        ///     The message to log.
-        /// </param>
-        public static void LogWarning([CanBeNull] this ILogger logger, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception, string message)
-        {
-            Log(logger, LogLevel.Warning, context, exception, message);
+            return SafeLog(logger, logLevel, null, exception, message);
         }
 
         /// <summary>
@@ -745,17 +348,17 @@ namespace OpenCollar.Extensions.Logging
         /// <param name="message">
         ///     The message to log.
         /// </param>
-        private static void Log([CanBeNull] ILogger logger, LogLevel logLevel, [CanBeNull] LoggingContext context, [CanBeNull] Exception exception,
-            [CanBeNull] string message)
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, LoggingContext? context, Exception? exception,
+            string? message)
         {
             if(ReferenceEquals(logger, null))
             {
-                return;
+                return logger;
             }
 
             if(!logger.IsEnabled(logLevel))
             {
-                return;
+                return logger;
             }
 
             // If the ApplicationInsightsTelemeteryInitializer has failed to be loaded for some reason, or has never
@@ -765,14 +368,14 @@ namespace OpenCollar.Extensions.Logging
 
             if(!AppendContextualInformationToLogMessages || ReferenceEquals(context, null))
             {
-                modifiedMessage = message;
+                modifiedMessage = message ?? string.Empty;
             }
             else
             {
                 var contextualInformation = context.ToString();
                 if(string.IsNullOrWhiteSpace(contextualInformation))
                 {
-                    modifiedMessage = message;
+                    modifiedMessage = message ?? string.Empty;
                 }
                 else
                 {
@@ -788,6 +391,993 @@ namespace OpenCollar.Extensions.Logging
             {
                 Microsoft.Extensions.Logging.LoggerExtensions.Log(logger, logLevel, exception, modifiedMessage);
             }
+
+            return logger;
+        }
+
+        /// <summary>
+        ///     Logs the message given at the specified log level, with additional contextual information taken from the
+        ///     context given.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="logLevel">
+        ///     The log level at which to log the message.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLog(this ILogger? logger, LogLevel logLevel, LoggingContext? context, Exception? exception,
+            Func<string?>? message)
+        {
+            if(ReferenceEquals(logger, null))
+            {
+                return logger;
+            }
+
+            if(!logger.IsEnabled(logLevel))
+            {
+                return logger;
+            }
+
+            string? evaluatedMessage;
+
+            if(ReferenceEquals(message, null))
+            {
+                evaluatedMessage = string.Empty;
+            }
+            else
+            {
+                evaluatedMessage = message();
+            }
+
+            return SafeLog(logger, logLevel, context, exception, evaluatedMessage);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Critical", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogCritical(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Critical, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Debug", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogDebug(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Debug, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Error, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Error, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Error, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Error, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Error, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Error, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Error, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Error", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogError(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Error, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Information, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Information, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Information, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Information, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Information, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Information, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Information, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Information", with additional contextual information
+        ///     taken from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogInformation(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Information, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Trace", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogTrace(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Trace, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, string? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, LoggingContext? context, string? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     The message to log.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, LoggingContext? context, Exception? exception, string? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, context, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, null, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, LoggingContext? context, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, context, null, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, null, exception, message);
+        }
+
+        /// <summary>
+        ///     Logs the message given with the log level set to "Warning", with additional contextual information taken
+        ///     from the current thread's logging context.
+        /// </summary>
+        /// <param name="logger">
+        ///     The logger into which to log the message given.
+        /// </param>
+        /// <param name="context">
+        ///     The context from which to take contextual information. If <see langword="null" /> the current thread's
+        ///     logging context is used.
+        /// </param>
+        /// <param name="exception">
+        ///     The exception to record alongside the message (can be left as <see langword="null" /> if there is no
+        ///     exception to record).
+        /// </param>
+        /// <param name="message">
+        ///     A function that will return the message to log. This is only called if the message will definitely be
+        ///     written, meaning that operations are only used when the results will be recorded.
+        /// </param>
+        public static ILogger? SafeLogWarning(this ILogger? logger, LoggingContext? context, Exception? exception, Func<string?>? message)
+        {
+            return SafeLog(logger, LogLevel.Warning, context, exception, message);
         }
     }
 }

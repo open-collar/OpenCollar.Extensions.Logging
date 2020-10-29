@@ -24,8 +24,6 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-using JetBrains.Annotations;
-
 namespace OpenCollar.Extensions.Logging
 {
     /// <summary>
@@ -36,13 +34,11 @@ namespace OpenCollar.Extensions.Logging
         /// <summary>
         ///     The value recorded when an empty value is recorded.
         /// </summary>
-        [NotNull]
         private const string _emptyInformation = @"EMPTY";
 
         /// <summary>
         ///     The value recorded when a <see langword="null" /> value is recorded.
         /// </summary>
-        [NotNull]
         private const string _nullInformation = @"NULL";
 
         /// <summary>
@@ -51,13 +47,11 @@ namespace OpenCollar.Extensions.Logging
         /// <remarks>
         ///     We use the <see cref="AsyncLocal{T}" /> class to ensure that the value is local to the current task.
         /// </remarks>
-        [CanBeNull]
         private static AsyncLocal<LoggingContext?> _threadContext = new AsyncLocal<LoggingContext?>();
 
         /// <summary>
         ///     A dictionary containing the contextual information set in the current logging context. Keys are case insensitive.
         /// </summary>
-        [NotNull]
         private readonly Dictionary<string, string> _contextualInformation = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
@@ -67,7 +61,7 @@ namespace OpenCollar.Extensions.Logging
         ///     The parent logging context from which to inherit contextual information. This is typically used when the
         ///     context is to be passed to a new thread.
         /// </param>
-        private LoggingContext([CanBeNull] LoggingContext? parentContext)
+        private LoggingContext(LoggingContext? parentContext)
         {
             if(!ReferenceEquals(parentContext, null))
             {
@@ -89,9 +83,9 @@ namespace OpenCollar.Extensions.Logging
         ///     The key identifing the information requested.
         /// </param>
         /// <returns>
+        ///     The information item requested, or <see langword="null" /> if there was no corresponding item.
         /// </returns>
-        [CanBeNull]
-        public string? this[[CanBeNull] string key]
+        public string? this[string key]
         {
             get
             {
@@ -118,7 +112,6 @@ namespace OpenCollar.Extensions.Logging
         /// <returns>
         ///     The context for the current thread.
         /// </returns>
-        [NotNull]
         public static LoggingContext Current() => Current(null);
 
         /// <summary>
@@ -131,8 +124,7 @@ namespace OpenCollar.Extensions.Logging
         /// <returns>
         ///     The context for the current thread.
         /// </returns>
-        [NotNull]
-        public static LoggingContext Current([CanBeNull] LoggingContext? parentContext)
+        public static LoggingContext Current(LoggingContext? parentContext)
         {
             if(!ReferenceEquals(_threadContext.Value, null))
             {
@@ -157,15 +149,18 @@ namespace OpenCollar.Extensions.Logging
         ///     This is the value to record against the key given. This is typically an ID that we may want to find when
         ///     searching logs.
         /// </param>
-        public void AppendInfo([CanBeNull] string key, Guid value)
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext AppendInfo(string? key, Guid value)
         {
             if(value == Guid.Empty)
             {
                 AppendInfo(key, _emptyInformation);
-                return;
+                return this;
             }
 
-            AppendInfo(key, value.ToString("D", CultureInfo.InvariantCulture));
+            return AppendInfo(key, value.ToString("D", CultureInfo.InvariantCulture));
         }
 
         /// <summary>
@@ -179,15 +174,20 @@ namespace OpenCollar.Extensions.Logging
         ///     This is the value to record against the key given. This is typically an ID that we may want to find when
         ///     searching logs.
         /// </param>
-        public void AppendInfo([CanBeNull] string key, [CanBeNull] string value)
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext AppendInfo(string? key, string? value)
         {
             if(string.IsNullOrWhiteSpace(key))
             {
                 // We mustn't throw exceptions or do anything disruptive, this is just logging after all.
-                return;
+                return this;
             }
 
             _contextualInformation[key] = value;
+
+            return this;
         }
 
         /// <summary>
@@ -201,9 +201,12 @@ namespace OpenCollar.Extensions.Logging
         ///     This is the value to record against the key given. This is typically an ID that we may want to find when
         ///     searching logs.
         /// </param>
-        public void AppendInfo([CanBeNull] string key, int value)
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext AppendInfo(string? key, int value)
         {
-            AppendInfo(key, value.ToString("D0", CultureInfo.InvariantCulture));
+            return AppendInfo(key, value.ToString("D0", CultureInfo.InvariantCulture));
         }
 
         /// <summary>
@@ -217,37 +220,43 @@ namespace OpenCollar.Extensions.Logging
         ///     This is the value to record against the key given. This is typically an ID that we may want to find when
         ///     searching logs.
         /// </param>
-        public void AppendInfo([CanBeNull] string key, int? value)
-        {
-            if(!value.HasValue)
-            {
-                AppendInfo(key, _nullInformation);
-                return;
-            }
-
-            AppendInfo(key, value.Value);
-        }
-
-        /// <summary>
-        ///     Adds the information to the context in the form of a key/value pair.
-        /// </summary>
-        /// <param name="key">
-        ///     The key identifying the item of information. This is case-insensitive. <see langword="null" />,
-        ///     zero-length or white-space only keys are ignored.
-        /// </param>
-        /// <param name="value">
-        ///     This is the value to record against the key given. This is typically an ID that we may want to find when
-        ///     searching logs.
-        /// </param>
-        public void AppendInfo([CanBeNull] string key, Guid? value)
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext AppendInfo(string? key, int? value)
         {
             if(!value.HasValue)
             {
                 AppendInfo(key, _nullInformation);
-                return;
+                return this;
             }
 
-            AppendInfo(key, value.Value);
+            return AppendInfo(key, value.Value);
+        }
+
+        /// <summary>
+        ///     Adds the information to the context in the form of a key/value pair.
+        /// </summary>
+        /// <param name="key">
+        ///     The key identifying the item of information. This is case-insensitive. <see langword="null" />,
+        ///     zero-length or white-space only keys are ignored.
+        /// </param>
+        /// <param name="value">
+        ///     This is the value to record against the key given. This is typically an ID that we may want to find when
+        ///     searching logs.
+        /// </param>
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext AppendInfo(string? key, Guid? value)
+        {
+            if(!value.HasValue)
+            {
+                AppendInfo(key, _nullInformation);
+                return this;
+            }
+
+            return AppendInfo(key, value.Value);
         }
 
         /// <summary>
@@ -257,15 +266,20 @@ namespace OpenCollar.Extensions.Logging
         ///     The key identifying the item of information. This is case-insensitive. <see langword="null" />,
         ///     zero-length or white-space only keys are ignored.
         /// </param>
-        public void ClearInfo([CanBeNull] string key)
+        /// <returns>
+        ///     Returns this logging context, allow fluent-style chaining of commands.
+        /// </returns>
+        public LoggingContext ClearInfo(string? key)
         {
             if(string.IsNullOrWhiteSpace(key))
             {
                 // We mustn't throw exceptions or do anything disruptive, this is just logging after all.
-                return;
+                return this;
             }
 
             _contextualInformation.Remove(key);
+
+            return this;
         }
 
         /// <summary>
@@ -274,7 +288,6 @@ namespace OpenCollar.Extensions.Logging
         /// <returns>
         ///     Returns this logging context, allow fluent-style chaining of commands.
         /// </returns>
-        [NotNull]
         public LoggingContext ClearInfo()
         {
             _contextualInformation.Clear();
@@ -283,6 +296,14 @@ namespace OpenCollar.Extensions.Logging
 
             return this;
         }
+
+        /// <summary>
+        ///     Gets a snapshot of the current values held in the context.
+        /// </summary>
+        /// <returns>
+        ///     An array containing the key values pairs currently in the context.
+        /// </returns>
+        public KeyValuePair<string, string>[] GetSnapshot() => _contextualInformation.ToArray();
 
         /// <summary>
         ///     Returns a string that represents the current object.
@@ -318,21 +339,12 @@ namespace OpenCollar.Extensions.Logging
         }
 
         /// <summary>
-        ///     Gets a snapshot of the current values held in the context.
-        /// </summary>
-        /// <returns>
-        ///     An array containing the key values pairs currently in the context.
-        /// </returns>
-        [NotNull]
-        public KeyValuePair<string, string>[] GetSnapshot() => _contextualInformation.ToArray();
-
-        /// <summary>
         ///     Reload the contextual information from the snapshot given.
         /// </summary>
         /// <param name="snapshot">
         ///     The snapshot from which to reload.
         /// </param>
-        internal void RevertToSnapshot([CanBeNull] KeyValuePair<string, string>[] snapshot)
+        internal void RevertToSnapshot(KeyValuePair<string, string>[]? snapshot)
         {
             if(ReferenceEquals(snapshot, null))
             {
@@ -359,11 +371,10 @@ namespace OpenCollar.Extensions.Logging
         ///     An object that implements the <see cref="ITransientContextualInformationScope" /> interface that will
         ///     revert the contextual information held in this logging context on disposal.
         /// </returns>
-        [NotNull]
         internal ITransientContextualInformationScope StartScope() => new TransientContextualInformationScope(this);
 
         /// <summary>
-        ///     Captures environmental information about the host.
+        ///     Captures environmental information about the host, capturing data commonly found in Azure and Windows environments.
         /// </summary>
         private void InitializeHostInformation()
         {
@@ -418,31 +429,11 @@ namespace OpenCollar.Extensions.Logging
                 AppendInfo("Host.Authority", value);
             }
 
-            value = Environment.GetEnvironmentVariable("Meta:Environment");
-            if(!string.IsNullOrWhiteSpace(value))
-            {
-                AppendInfo("Meta.Environment", value);
-            }
-
-            value = Environment.GetEnvironmentVariable("Meta:PortalUrl");
-            if(!string.IsNullOrWhiteSpace(value))
-            {
-                AppendInfo("Meta.Portal.Url", value);
-            }
-
-            value = Environment.GetEnvironmentVariable("Meta:Region");
-            if(!string.IsNullOrWhiteSpace(value))
-            {
-                AppendInfo("Meta.Region", value);
-            }
-
             value = Environment.GetEnvironmentVariable("APPSETTING_WEBSITE_SLOT_NAME");
             if(!string.IsNullOrWhiteSpace(value))
             {
                 AppendInfo("Host.Slot.Name", value);
             }
-
-            AppendInfo("App.Version", GetType().Assembly.GetName().Version.ToString(4));
         }
     }
 }

@@ -19,8 +19,6 @@
 
 using System.Collections.Generic;
 
-using JetBrains.Annotations;
-
 namespace OpenCollar.Extensions.Logging
 {
     /// <summary>
@@ -32,14 +30,12 @@ namespace OpenCollar.Extensions.Logging
         /// <summary>
         ///     The logging context from which to clear values.
         /// </summary>
-        [NotNull]
         private readonly LoggingContext _context;
 
         /// <summary>
         ///     The snapshot of the information held in the logging context at the start of the scope.
         /// </summary>
-        [CanBeNull]
-        private readonly KeyValuePair<string, string>[] _snapshot;
+        private readonly KeyValuePair<string, string>[]? _snapshot;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="TransientContextualInformationScope" /> class.
@@ -47,7 +43,7 @@ namespace OpenCollar.Extensions.Logging
         /// <param name="context">
         ///     The logging context from which to clear values.
         /// </param>
-        internal TransientContextualInformationScope([NotNull] LoggingContext context)
+        internal TransientContextualInformationScope(LoggingContext context)
         {
             _context = context;
             _snapshot = _context.GetSnapshot();
