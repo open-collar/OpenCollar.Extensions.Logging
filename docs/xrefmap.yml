@@ -393,6 +393,19 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggingContext.Current
   nameWithType: LoggingContext.Current
+- uid: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
+  name: GetSnapshot()
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot()
+  nameWithType: LoggingContext.GetSnapshot()
+- uid: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot*
+  name: GetSnapshot
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot
+  nameWithType: LoggingContext.GetSnapshot
 - uid: OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)
   name: Item[String]
   href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_Item_System_String_
