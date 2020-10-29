@@ -82,217 +82,475 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggerExtensions.BeginOperation
   nameWithType: LoggerExtensions.BeginOperation
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: Log(ILogger, LogLevel, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.Log(ILogger, LogLevel, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String)
-  name: Log(ILogger, LogLevel, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Exception, System.String)
-  nameWithType: LoggerExtensions.Log(ILogger, LogLevel, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
-  name: Log(ILogger, LogLevel, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.Log(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.String)
-  nameWithType: LoggerExtensions.Log(ILogger, LogLevel, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.Log*
-  name: Log
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_Log_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.Log
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLog(ILogger, LogLevel, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLog(ILogger, LogLevel, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLog(ILogger, LogLevel, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLog(ILogger, LogLevel, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLog(ILogger, LogLevel, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLog(ILogger, LogLevel, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.Func{System.String})
+  name: SafeLog(ILogger, LogLevel, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.Func{System.String})
+  name.vb: SafeLog(ILogger, LogLevel, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLog(ILogger, LogLevel, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String)
+  name: SafeLog(ILogger, LogLevel, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Func{System.String})
+  name: SafeLog(ILogger, LogLevel, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.Func{System.String})
+  name.vb: SafeLog(ILogger, LogLevel, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLog(ILogger, LogLevel, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
+  name: SafeLog(ILogger, LogLevel, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_LogLevel_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.LogLevel,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog(Microsoft.Extensions.Logging.ILogger, Microsoft.Extensions.Logging.LogLevel, System.String)
+  nameWithType: LoggerExtensions.SafeLog(ILogger, LogLevel, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog*
+  name: SafeLog
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLog_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.Log
-  nameWithType: LoggerExtensions.Log
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogCritical(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogCritical(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogCritical(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogCritical(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogCritical(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogCritical(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogCritical(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogCritical(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical*
-  name: LogCritical
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogCritical_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLog
+  nameWithType: LoggerExtensions.SafeLog
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogCritical(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogCritical(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogCritical(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogCritical(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogCritical(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogCritical(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogCritical(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogCritical(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogCritical(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogCritical(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogCritical(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogCritical(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogCritical(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogCritical(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogCritical(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical*
+  name: SafeLogCritical
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogCritical_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogCritical
-  nameWithType: LoggerExtensions.LogCritical
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogDebug(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogDebug(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogDebug(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogDebug(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogDebug(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogDebug(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogDebug(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogDebug(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug*
-  name: LogDebug
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogDebug_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogCritical
+  nameWithType: LoggerExtensions.SafeLogCritical
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogDebug(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogDebug(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogDebug(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogDebug(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogDebug(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogDebug(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogDebug(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogDebug(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogDebug(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogDebug(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogDebug(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogDebug(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogDebug(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogDebug(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogDebug(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug*
+  name: SafeLogDebug
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogDebug_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogDebug
-  nameWithType: LoggerExtensions.LogDebug
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogError(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogError(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogError(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogError(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogError(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogError(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogError(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogError_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogError(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogError(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogError*
-  name: LogError
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogError_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogError
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogDebug
+  nameWithType: LoggerExtensions.SafeLogDebug
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogError(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogError(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogError(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogError(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogError(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogError(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogError(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogError(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogError(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogError(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogError(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogError(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogError(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogError(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogError(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogError(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogError(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError*
+  name: SafeLogError
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogError_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogError
-  nameWithType: LoggerExtensions.LogError
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogInformation(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogInformation(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogInformation(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogInformation(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogInformation(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogInformation(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogInformation(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogInformation(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation*
-  name: LogInformation
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogInformation_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogError
+  nameWithType: LoggerExtensions.SafeLogError
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogInformation(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogInformation(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogInformation(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogInformation(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogInformation(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogInformation(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogInformation(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogInformation(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogInformation(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogInformation(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogInformation(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogInformation(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogInformation(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogInformation(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogInformation(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation*
+  name: SafeLogInformation
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogInformation_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogInformation
-  nameWithType: LoggerExtensions.LogInformation
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogTrace(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogTrace(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogTrace(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogTrace(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogTrace(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogTrace(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogTrace(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogTrace(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace*
-  name: LogTrace
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogTrace_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogInformation
+  nameWithType: LoggerExtensions.SafeLogInformation
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogTrace(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogTrace(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogTrace(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogTrace(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogTrace(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogTrace(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogTrace(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogTrace(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogTrace(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogTrace(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogTrace(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogTrace(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogTrace(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogTrace(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogTrace(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace*
+  name: SafeLogTrace
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogTrace_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogTrace
-  nameWithType: LoggerExtensions.LogTrace
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  name: LogWarning(ILogger, LoggingContext, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogWarning(ILogger, LoggingContext, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  name: LogWarning(ILogger, LoggingContext, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
-  nameWithType: LoggerExtensions.LogWarning(ILogger, LoggingContext, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  name: LogWarning(ILogger, Exception, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
-  nameWithType: LoggerExtensions.LogWarning(ILogger, Exception, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.String)
-  name: LogWarning(ILogger, String)
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_Microsoft_Extensions_Logging_ILogger_System_String_
-  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger,System.String)
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning(Microsoft.Extensions.Logging.ILogger, System.String)
-  nameWithType: LoggerExtensions.LogWarning(ILogger, String)
-- uid: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning*
-  name: LogWarning
-  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_LogWarning_
-  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogTrace
+  nameWithType: LoggerExtensions.SafeLogTrace
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name: SafeLogWarning(ILogger, LoggingContext, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.Func{System.String})
+  name.vb: SafeLogWarning(ILogger, LoggingContext, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  name: SafeLogWarning(ILogger, LoggingContext, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name: SafeLogWarning(ILogger, LoggingContext, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.Func{System.String})
+  name.vb: SafeLogWarning(ILogger, LoggingContext, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  name: SafeLogWarning(ILogger, LoggingContext, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_OpenCollar_Extensions_Logging_LoggingContext_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,OpenCollar.Extensions.Logging.LoggingContext,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, OpenCollar.Extensions.Logging.LoggingContext, System.String)
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, LoggingContext, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name: SafeLogWarning(ILogger, Exception, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.Func{System.String})
+  name.vb: SafeLogWarning(ILogger, Exception, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.Exception, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, Exception, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogWarning(ILogger, Exception, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  name: SafeLogWarning(ILogger, Exception, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_System_Exception_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Exception,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.Exception, System.String)
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, Exception, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name: SafeLogWarning(ILogger, Func<String>)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_System_Func_System_String__
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.Func{System.String})
+  name.vb: SafeLogWarning(ILogger, Func(Of String))
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.Func<System.String>)
+  fullName.vb: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.Func(Of System.String))
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, Func<String>)
+  nameWithType.vb: LoggerExtensions.SafeLogWarning(ILogger, Func(Of String))
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.String)
+  name: SafeLogWarning(ILogger, String)
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_Microsoft_Extensions_Logging_ILogger_System_String_
+  commentId: M:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger,System.String)
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning(Microsoft.Extensions.Logging.ILogger, System.String)
+  nameWithType: LoggerExtensions.SafeLogWarning(ILogger, String)
+- uid: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning*
+  name: SafeLogWarning
+  href: api/OpenCollar.Extensions.Logging.LoggerExtensions.html#OpenCollar_Extensions_Logging_LoggerExtensions_SafeLogWarning_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning
   isSpec: "True"
-  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.LogWarning
-  nameWithType: LoggerExtensions.LogWarning
+  fullName: OpenCollar.Extensions.Logging.LoggerExtensions.SafeLogWarning
+  nameWithType: LoggerExtensions.SafeLogWarning
 - uid: OpenCollar.Extensions.Logging.LoggingContext
   name: LoggingContext
   href: api/OpenCollar.Extensions.Logging.LoggingContext.html
