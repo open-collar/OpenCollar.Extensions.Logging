@@ -306,6 +306,41 @@ namespace OpenCollar.Extensions.Logging
         public KeyValuePair<string, string>[] GetSnapshot() => _contextualInformation.ToArray();
 
         /// <summary>
+        ///     Reload the contextual information from the snapshot given.
+        /// </summary>
+        /// <param name="snapshot">
+        ///     The snapshot from which to reload.
+        /// </param>
+        public void RevertToSnapshot(KeyValuePair<string, string>[]? snapshot)
+        {
+            if(ReferenceEquals(snapshot, null))
+            {
+                return;
+            }
+
+            _contextualInformation.Clear();
+            foreach(var pair in snapshot)
+            {
+                if(string.IsNullOrWhiteSpace(pair.Key))
+                {
+                    return;
+                }
+
+                _contextualInformation[pair.Key] = pair.Value;
+            }
+        }
+
+        /// <summary>
+        ///     Initializes and returns a scope that, when disposed of, will revert the contextual information to the
+        ///     values at the time of calling.
+        /// </summary>
+        /// <returns>
+        ///     An object that implements the <see cref="ITransientContextualInformationScope" /> interface that will
+        ///     revert the contextual information held in this logging context on disposal.
+        /// </returns>
+        public ITransientContextualInformationScope StartScope() => new TransientContextualInformationScope(this);
+
+        /// <summary>
         ///     Returns a string that represents the current object.
         /// </summary>
         /// <returns>
@@ -337,41 +372,6 @@ namespace OpenCollar.Extensions.Logging
 
             return sb.ToString();
         }
-
-        /// <summary>
-        ///     Reload the contextual information from the snapshot given.
-        /// </summary>
-        /// <param name="snapshot">
-        ///     The snapshot from which to reload.
-        /// </param>
-        internal void RevertToSnapshot(KeyValuePair<string, string>[]? snapshot)
-        {
-            if(ReferenceEquals(snapshot, null))
-            {
-                return;
-            }
-
-            _contextualInformation.Clear();
-            foreach(var pair in snapshot)
-            {
-                if(string.IsNullOrWhiteSpace(pair.Key))
-                {
-                    return;
-                }
-
-                _contextualInformation[pair.Key] = pair.Value;
-            }
-        }
-
-        /// <summary>
-        ///     Initializes and returns a scope that, when disposed of, will revert the contextual information to the
-        ///     values at the time of calling.
-        /// </summary>
-        /// <returns>
-        ///     An object that implements the <see cref="ITransientContextualInformationScope" /> interface that will
-        ///     revert the contextual information held in this logging context on disposal.
-        /// </returns>
-        internal ITransientContextualInformationScope StartScope() => new TransientContextualInformationScope(this);
 
         /// <summary>
         ///     Captures environmental information about the host, capturing data commonly found in Azure and Windows environments.
