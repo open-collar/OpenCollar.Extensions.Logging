@@ -680,6 +680,35 @@ references:
   isSpec: "True"
   fullName: OpenCollar.Extensions.Logging.LoggingContext.Item
   nameWithType: LoggingContext.Item
+- uid: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair{System.String,System.String}[])
+  name: RevertToSnapshot(KeyValuePair<String, String>[])
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_RevertToSnapshot_System_Collections_Generic_KeyValuePair_System_String_System_String____
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair{System.String,System.String}[])
+  name.vb: RevertToSnapshot(KeyValuePair(Of String, String)())
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair<System.String, System.String>[])
+  fullName.vb: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot(System.Collections.Generic.KeyValuePair(Of System.String, System.String)())
+  nameWithType: LoggingContext.RevertToSnapshot(KeyValuePair<String, String>[])
+  nameWithType.vb: LoggingContext.RevertToSnapshot(KeyValuePair(Of String, String)())
+- uid: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot*
+  name: RevertToSnapshot
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_RevertToSnapshot_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.RevertToSnapshot
+  nameWithType: LoggingContext.RevertToSnapshot
+- uid: OpenCollar.Extensions.Logging.LoggingContext.StartScope
+  name: StartScope()
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_StartScope
+  commentId: M:OpenCollar.Extensions.Logging.LoggingContext.StartScope
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.StartScope()
+  nameWithType: LoggingContext.StartScope()
+- uid: OpenCollar.Extensions.Logging.LoggingContext.StartScope*
+  name: StartScope
+  href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_StartScope_
+  commentId: Overload:OpenCollar.Extensions.Logging.LoggingContext.StartScope
+  isSpec: "True"
+  fullName: OpenCollar.Extensions.Logging.LoggingContext.StartScope
+  nameWithType: LoggingContext.StartScope
 - uid: OpenCollar.Extensions.Logging.LoggingContext.ToString
   name: ToString()
   href: api/OpenCollar.Extensions.Logging.LoggingContext.html#OpenCollar_Extensions_Logging_LoggingContext_ToString
