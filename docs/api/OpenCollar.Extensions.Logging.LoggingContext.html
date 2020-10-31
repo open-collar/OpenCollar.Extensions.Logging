@@ -104,7 +104,7 @@
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_Item_System_String_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L93">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L88">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_Item_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Item*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_Item_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Item(System.String)">Item[String]</h4>
@@ -113,8 +113,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[CanBeNull]
-public string this[[CanBeNull] string key] { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string this[string key] { get; }</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -145,7 +144,8 @@ public string this[[CanBeNull] string key] { get; }</code></pre>
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><p>The information item requested, or <span class="xref">null</span> if there was no corresponding item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -156,7 +156,7 @@ public string this[[CanBeNull] string key] { get; }</code></pre>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Guid_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L160">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L155">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Guid_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Guid)">AppendInfo(String, Guid)</h4>
@@ -165,7 +165,7 @@ public string this[[CanBeNull] string key] { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInfo([CanBeNull] string key, Guid value)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext AppendInfo(string key, Guid value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,12 +193,28 @@ searching logs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L204">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L207">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Int32_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Int32)">AppendInfo(String, Int32)</h4>
@@ -207,7 +223,7 @@ searching logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInfo([CanBeNull] string key, int value)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext AppendInfo(string key, int value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -235,12 +251,28 @@ searching logs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Guid__.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String%2CSystem.Nullable%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L242">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L251">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Guid__" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Guid})">AppendInfo(String, Nullable&lt;Guid&gt;)</h4>
@@ -249,7 +281,7 @@ searching logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInfo([CanBeNull] string key, Guid? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext AppendInfo(string key, Guid? value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,12 +309,28 @@ searching logs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L220">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L226">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_Nullable_System_Int32__" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.Nullable{System.Int32})">AppendInfo(String, Nullable&lt;Int32&gt;)</h4>
@@ -291,7 +339,7 @@ searching logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInfo([CanBeNull] string key, int? value)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext AppendInfo(string key, int? value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -319,12 +367,28 @@ searching logs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_String_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L182">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L180">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_AppendInfo_System_String_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.AppendInfo(System.String,System.String)">AppendInfo(String, String)</h4>
@@ -333,7 +397,7 @@ searching logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AppendInfo([CanBeNull] string key, [CanBeNull] string value)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext AppendInfo(string key, string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,12 +425,28 @@ searching logs.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_Clear.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L110">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L104">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_Clear_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Clear*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_Clear" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Clear">Clear()</h4>
@@ -382,7 +462,7 @@ searching logs.</p>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_ClearInfo.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.ClearInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L277">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L291">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ClearInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_ClearInfo" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ClearInfo">ClearInfo()</h4>
@@ -391,8 +471,7 @@ searching logs.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NotNull]
-public LoggingContext ClearInfo()</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext ClearInfo()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -415,7 +494,7 @@ public LoggingContext ClearInfo()</code></pre>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_System_String_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.ClearInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L260">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L272">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ClearInfo*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_ClearInfo_System_String_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ClearInfo(System.String)">ClearInfo(String)</h4>
@@ -424,7 +503,7 @@ public LoggingContext ClearInfo()</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClearInfo([CanBeNull] string key)</code></pre>
+    <pre><code class="lang-csharp hljs">public LoggingContext ClearInfo(string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,12 +524,28 @@ zero-length or white-space only keys are ignored.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="OpenCollar.Extensions.Logging.LoggingContext.html">LoggingContext</a></td>
+        <td><p>Returns this logging context, allow fluent-style chaining of commands.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_Current.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.Current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L121">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L115">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_Current_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Current*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_Current" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Current">Current()</h4>
@@ -459,8 +554,7 @@ zero-length or white-space only keys are ignored.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NotNull]
-public static LoggingContext Current()</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoggingContext Current()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -483,7 +577,7 @@ public static LoggingContext Current()</code></pre>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_Current_OpenCollar_Extensions_Logging_LoggingContext_.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.Current(OpenCollar.Extensions.Logging.LoggingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L134">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L127">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_Current_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Current*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_Current_OpenCollar_Extensions_Logging_LoggingContext_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.Current(OpenCollar.Extensions.Logging.LoggingContext)">Current(LoggingContext)</h4>
@@ -493,8 +587,7 @@ the parent thread's context when a child thread is created).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NotNull]
-public static LoggingContext Current([CanBeNull] LoggingContext parentContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public static LoggingContext Current(LoggingContext parentContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -535,7 +628,7 @@ public static LoggingContext Current([CanBeNull] LoggingContext parentContext)</
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L326">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L306">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_GetSnapshot" data-uid="OpenCollar.Extensions.Logging.LoggingContext.GetSnapshot">GetSnapshot()</h4>
@@ -544,8 +637,7 @@ public static LoggingContext Current([CanBeNull] LoggingContext parentContext)</
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[NotNull]
-public KeyValuePair&lt;string, string&gt;[] GetSnapshot()</code></pre>
+    <pre><code class="lang-csharp hljs">public KeyValuePair&lt;string, string&gt;[] GetSnapshot()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -568,7 +660,7 @@ public KeyValuePair&lt;string, string&gt;[] GetSnapshot()</code></pre>
     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext_ToString.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L293">View Source</a>
+    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L314">View Source</a>
   </span>
   <a id="OpenCollar_Extensions_Logging_LoggingContext_ToString_" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ToString*"></a>
   <h4 id="OpenCollar_Extensions_Logging_LoggingContext_ToString" data-uid="OpenCollar.Extensions.Logging.LoggingContext.ToString">ToString()</h4>
@@ -608,7 +700,7 @@ public KeyValuePair&lt;string, string&gt;[] GetSnapshot()</code></pre>
                     <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/new/master/docs-ref-overwrite/new?filename=OpenCollar_Extensions_Logging_LoggingContext.md&amp;value=---%0Auid%3A%20OpenCollar.Extensions.Logging.LoggingContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/6e887e6b958a7269856fbac1b9baa10c5def5355/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/open-collar/OpenCollar.Extensions.Logging/blob/4c0b40224374d42049b8fa1c1f25cc775b61edb0/src/OpenCollar.Extensions.Logging/LoggingContext.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
@@ -627,7 +719,7 @@ public KeyValuePair&lt;string, string&gt;[] GetSnapshot()</code></pre>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <div style='box-sizing: border-box;'><div style='float: left; width: calc(100% - 200px);'>Copyright &copy; 2020 <a href='mailto:jevans@open-collar.org.uk'>Jonathan Evans</a></div><div style='float: left; width: 200px;'><span style='font-style: italic;'>Version: 0.4.7</span></div></div>
+            <div style='box-sizing: border-box;'><div style='float: left; width: calc(100% - 200px);'>Copyright &copy; 2020 <a href='mailto:jevans@open-collar.org.uk'>Jonathan Evans</a></div><div style='float: left; width: 200px;'><span style='font-style: italic;'>Version: 0.4.9</span></div></div>
             
           </div>
         </div>
