@@ -1,4 +1,4 @@
-![Open Collar](./media/opencollar-logo-320x25x32.png) 
+[![Open Collar](./media/opencollar-logo-320x25x32.png)](https://open-collar.github.io/home/)
 # OpenCollar.Extensions.Logging
 
 <table style="border-style: none; width: 100%;">
@@ -72,5 +72,6 @@ There are no hard dependencies on tooling, all that is required is the
 * [OpenCollar.Extensions.IO](https://github.com/open-collar/OpenCollar.Extensions.IO)
 * [OpenCollar.Extensions.Logging](https://github.com/open-collar/OpenCollar.Extensions.Logging)
 * [OpenCollar.Extensions.Security](https://github.com/open-collar/OpenCollar.Extensions.Security)
+* [OpenCollar.Extensions.SqlClient](https://github.com/open-collar/OpenCollar.Extensions.SqlClient)
 * [OpenCollar.Extensions.Threading](https://github.com/open-collar/OpenCollar.Extensions.Threading)
 * [OpenCollar.Extensions.Validation](https://github.com/open-collar/OpenCollar.Extensions.Validation)
